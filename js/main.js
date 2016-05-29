@@ -41,7 +41,7 @@ function init() {
             $({deg: 0}).animate({deg: angle}, args);
         });
     };
-    setListeners();    
+    setListeners();
 }
 
 function setListeners() {
@@ -85,12 +85,12 @@ function setListeners() {
     });
 
     var amountScrolled = $(window).height();
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > amountScrolled) {
-            $('.float-trigger').fadeIn('slow');
+            $('.float-trigger').show();
         } else {
-            $('.float-trigger').fadeOut('slow');
+            $('.float-bar').stop().hide();
+            $('.float-trigger').stop().hide();
         }
     });
 }
